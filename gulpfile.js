@@ -8,7 +8,14 @@ const imagemin = require('gulp-imagemin');
 const del = require('del');
 
 function scripts() {
-  return src(['node_modules/jquery/dist/jquery.js', 'app/js/main.js']).pipe(concat('main.min.js')).pipe(uglify()).pipe(dest('app/js')).pipe(browserSync.stream());
+  return src(['node_modules/jquery/dist/jquery.js', 
+              'app/scss/vendor/slick/slick.js',
+              'app/js/main.js'])
+  .pipe(concat('main.min.js'))
+  .pipe(uglify())
+  .pipe(dest('app/js'))
+  
+  .pipe(browserSync.stream());
 }
 
 function browsersync() {
@@ -20,7 +27,9 @@ function browsersync() {
 }
 
 function styles() {
-  return src('app/scss/style.scss')
+  return src(['node_modules/reset-css/reset.css',
+            'app/scss/vendor/slick/slick.css',
+            'app/scss/style.scss'])
     .pipe(scss({ outputStyle: 'compressed' }))
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 version'], grid: true }))
@@ -50,7 +59,11 @@ function images() {
 }
 
 function build() {
-  return src(['app/css/style.min.css', 'app/fonts/**/*', 'app/js/main.min.js', 'app/*.html'], { base: 'app' }).pipe(dest('dist'));
+  return src(['app/css/style.min.css', 
+  'app/fonts/**/*', 
+  'app/js/main.min.js', 
+  'app/*.html'], { base: 'app' })
+  .pipe(dest('dist'));
 }
 
 function cleanDist() {

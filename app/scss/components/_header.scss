@@ -1,0 +1,66 @@
+.header {
+    &__top {
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 40px;
+
+        &-inner {
+            border: 2px solid #ECB84C;
+            border-bottom: none;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            color: $white;
+
+        }
+    }
+
+
+    &__title {
+        color: $white;
+        font-size: 200px;
+        line-height: 227px;
+        font-weight: bold;
+        @extend %georgia-bold;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+        margin: auto;
+    }
+
+    &__text {
+        margin-bottom: -12px;
+        font-size: 24px;
+        line-height: 27px;
+        color: $white;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+        @extend %georgia-regular;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
+
+
+        &::after,&::before{
+            content: "";
+            width: 100%;
+            border-top: 2px solid #ECB84C;
+        }
+
+        &::after{
+            margin-left: 30px;
+        }
+
+        &::before{
+            margin-right: 30px;
+        }
+    }
+
+}

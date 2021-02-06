@@ -1,0 +1,32 @@
+.reason {
+	padding: 80px 0 0;
+
+	&__title {
+		margin-bottom: 22px;
+	}
+
+	&__link {
+		text-align: right;
+		margin-bottom: 36px;
+
+		a {
+			color: #ecb84c;
+			@extend %lato-bold;
+		}
+	}
+
+	&__statistics {
+		display: flex;
+		justify-content: space-around;
+		text-align: center;
+		align-items: center;
+		padding-bottom: 80px;
+
+		&-num {
+			margin-top: 32px;
+			@extend %lato-bold;
+			font-size: 22px;
+			line-height: 30px;
+		}
+	}
+}

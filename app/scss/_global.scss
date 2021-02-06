@@ -1,0 +1,64 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	display: inline-block;
+}
+
+ul,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-size: inherit;
+}
+
+body {
+	overflow-x: hidden;
+	position: relative;
+	@extend %lato-regular;
+	color: $body-text;
+	font-size: 16px;
+	line-height: 28px;
+}
+
+.container {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+
+	&-content {
+		max-width: 970px;
+		margin: 0 auto;
+	}
+}
+
+.section-line {
+	border-bottom: 1px solid darken(#d0d4d8, 0.5);
+}
+
+.title {
+	font-size: 32px;
+	line-height: 38px;
+	@extend %georgia-regular;
+	color: $body_title;
+	text-align: center;
+}

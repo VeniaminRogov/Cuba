@@ -1,0 +1,24 @@
+.menu {
+    border-bottom: 1px solid darken(#d0d4d8, 0.5);
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-link {
+            padding: 25px 10px 20px;
+            color: #909090;
+            font-size: 14px;
+            line-height: 19px;
+            @extend %lato-bold;
+            border-bottom: 4px solid transparent;
+            transition: all 0.3s;
+
+            &:hover {
+                color: #4e5665;
+                border-bottom: 4px solid #ecb84c;
+            }
+        }
+    }
+}
