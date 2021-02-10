@@ -1,17 +1,17 @@
-.photo{
+.photo {
   padding: 80px 0;
 }
 
-.photo__title{
+.photo__title {
   margin-bottom: 42px;
 }
 
-.photo__text{
+.photo__text {
   padding-bottom: 48px;
   margin-bottom: 56px;
   position: relative;
 
-  &::after{
+  &::after {
     content: "";
     position: absolute;
     width: 270px;
@@ -24,17 +24,28 @@
   }
 }
 
-.photo__slider{
+.photo__slider {
   max-width: 640px;
   margin: 0 auto;
 }
 
-// .slick-arrow{
-//   width: 40px;
-//   height: 40px;
-//   border: none;
-//   border-radius: 50%;
-//   background-color: #ECB84C;
-//   cursor: pointer;
-//   transform: translateY(-50%);
-// }
+.slick-arrow {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ecb84c;
+  cursor: pointer;
+  transform: translateY(-50%);
+  top: 50%;
+  z-index: 5;
+}
+
+.slick-prev {
+  left: -20px;
+}
+
+.slick-next {
+  right: -20px;
+}

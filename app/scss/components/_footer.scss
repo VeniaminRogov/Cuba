@@ -1,0 +1,21 @@
+.footer {
+	padding: 55px 0;
+}
+
+.footer__inner {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.company__title,
+.details__title,
+.contacts__title,
+.blog__title,
+.title {
+	font-size: 15px;
+	line-height: 20px;
+	@extend %lato-bold;
+	margin-bottom: 20px;
+}
